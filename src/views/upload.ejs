@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include ('partials/head.ejs')%>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-auto my-4">
+                <div class="card">
+                    <div class="container mt-3">
+                        <form action="/upload" method="POST" enctype="multipart/form-data">
+                            <div class="input-group mb-3">
+                                <div class="custom-file">
+                                    <input type="file" name="img" class="custom-file-input" id="inputGroupFile04"
+                                        aria-describedby="inputGroupFileAddon04">
+                                    <label class="custom-file-label" for="inputGroupFile04">Choose file</label>
+                                </div>
+                            </div>
+                            <div class="input-group mb-3">
+                                <input type="text" name="title" class="form-control" placeholder="Titulo">
+                            </div>
+                            <div class="input-group mb-3">
+                                <textarea name="description" cols="60" rows="2" class="form-control"
+                                    placeholder="Descripción"></textarea>
+                            </div>
+                            <div class="input-group mb-3">
+                                <button type="submit" class="btn btn-success btn-block">
+                                    Enviar
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <%- include ('partials/footer.ejs')%>
+</body>
+
+</html>
